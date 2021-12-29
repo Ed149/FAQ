@@ -1,0 +1,15 @@
+$breakpoints: (
+    sm: 375px,
+    md: 768px,
+    lg:1440px
+);
+
+@mixin media-up($breakpoint){
+    @if map-has-key($breakpoints,$breakpoint) {
+        @media screen and (min-width:map-get($breakpoints,$breakpoint)) {
+            @content;            
+        }  
+    }@else{
+        @warn "No existe un tamaño";
+    }
+}

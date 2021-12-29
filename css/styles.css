@@ -1,0 +1,173 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 12px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#af67e9), to(#6565e7));
+  background-image: linear-gradient(180deg, #af67e9, #6565e7);
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+.center {
+  text-align: center;
+}
+
+.wrapper {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+}
+
+.card {
+  width: 21rem;
+  background-color: white;
+  border-radius: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 60rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 30rem;
+    max-height: 60rem;
+  }
+}
+
+.card__images {
+  width: 100%;
+  height: 8rem;
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .card__images {
+    height: 100%;
+    overflow: hidden;
+  }
+}
+
+.card__image {
+  width: 19rem;
+  height: 13.7rem;
+  background-image: url("../img/illustration-woman-online-mobile.svg");
+  background-size: cover;
+  background-position: center center;
+  position: absolute;
+  top: -7.5rem;
+  left: 0rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card__image {
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card__image {
+    width: 100%;
+    background-image: url("../img/illustration-woman-online-desktop.svg");
+    background-size: 33rem;
+    background-repeat: no-repeat;
+    background-position: -5.4rem 2rem;
+    top: 0rem;
+    left: 0rem;
+    z-index: 5;
+  }
+}
+
+.card__image::before {
+  content: url("../img/bg-pattern-mobile.svg");
+  height: 100%;
+  width: 19rem;
+  position: absolute;
+  bottom: -8rem;
+  right: -3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card__image::before {
+    content: url("../img/bg-pattern-desktop.svg");
+    position: absolute;
+    height: 100%;
+    width: 30rem;
+    top: -19rem;
+    right: 34rem;
+    z-index: 3;
+  }
+}
+
+.card__text {
+  padding: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .card__text {
+    padding: 4rem 0;
+  }
+}
+
+.card__title {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .card__title {
+    text-align: start;
+  }
+}
+
+.card__questions {
+  padding: 1rem 0;
+}
+
+.card__question {
+  padding: .9rem 0;
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.card__question:hover {
+  color: #f47c57;
+  cursor: pointer;
+}
+
+.card__question h2 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.card__question_content {
+  overflow: hidden;
+  margin-top: .4rem;
+  -webkit-transition: height 300ms ease-in-out;
+  transition: height 300ms ease-in-out;
+  height: 0px;
+}
+
+.card__question_content p {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1d1e35;
+}
+
+.mh {
+  height: 68px;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+/*# sourceMappingURL=styles.css.map */
